@@ -1,6 +1,8 @@
 global _start
 
-start_
+section .text
+
+_start:
 
   push 0x66 ; syscall sys_socketcall for creating socket
   pop eax   ; zeroize EAX register
