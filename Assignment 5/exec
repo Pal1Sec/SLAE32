@@ -1,4 +1,4 @@
-00000000  6A0B              push byte 0xb                         ; 
+00000000  6A0B              push byte 0xb                         ; sys_execve
 00000002  58                pop eax                               ; 
 00000003  99                cwd                                   ; set EDX = 0
 00000004  52                push edx                              ; 0
