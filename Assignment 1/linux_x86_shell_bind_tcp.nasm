@@ -20,8 +20,6 @@ _start:
   int 0x80            ; interrupt vector
   mov edi, eax        ; storing EAX into EDI for future references
 
-----
-
 ; syscall bind()
 
   xor eax, eax       ; zeroize EAX register
