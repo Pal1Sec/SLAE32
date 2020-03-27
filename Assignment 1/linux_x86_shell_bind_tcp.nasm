@@ -22,9 +22,9 @@ _start:
 
 ; syscall bind()
 
-  xor eax, eax       ; zeroize EAX register
-  mov ax, 0x169      ; syscall bind
-  mov ebx, edi       ; reference to stored eax from socket()
+  xor eax, eax        ; zeroize EAX register
+  mov ax, 0x169       ; syscall bind
+  mov ebx, edi        ; reference to stored eax from socket()
   
 
 
