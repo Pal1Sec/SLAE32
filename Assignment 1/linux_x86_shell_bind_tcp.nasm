@@ -28,7 +28,7 @@ _start:
   xor ecx, ecx        ; zeroize ECX register (=> sockaddr struct)
   push ecx            ; 0
   push ecx            ; Internet address 0.0.0.0
-  push word 0x2329    ; push port number 9001
+  push word 0x2923    ; push port number 9001 (little endian)
   push word 0x2       ; push AF_INET 2
   mov ecx, esp        ; Stack Pointer -> ECX
   mov dl, 16          ; addrlen (EDX) = 16
