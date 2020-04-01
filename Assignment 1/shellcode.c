@@ -1,4 +1,4 @@
-# bind_shell_tcp shellcode.c
+# shell_bind_tcp shellcode.c
 # Author SLAE-14209
 #
 #include<stdio.h>
