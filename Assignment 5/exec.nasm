@@ -17,7 +17,7 @@ _start:
     push dword 0x6e69622f     ; "/bin"
     mov ebx, esp              ; ESP -> EBX
     push edx                  ; EDX = 0
-    call 0x1                  ; storing the command into the stack
+    call 0x1                  ; storing the command "whoami" into the stack
     push edi
     push ebx
     mov ecx, esp              ; ECX (/bin/bash -c whoami) -> stack
