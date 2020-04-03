@@ -1,4 +1,4 @@
-; Filename: exec.nasm
+; Filename: read_file.nasm
 ; Author: SLAE-14209
 
 global _start
