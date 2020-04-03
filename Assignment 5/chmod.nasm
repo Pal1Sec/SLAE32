@@ -21,7 +21,7 @@ _start:
     gs cs je 0x4040ce          ;---|
     
     pop ebx
-    push dword 0x1ff
+    push dword 0x1ff           ; hex 0x1ff = 777 octal 
     pop ecx
     
     push byte 0x1              ; syscall exit()
