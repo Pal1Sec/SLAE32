@@ -7,17 +7,19 @@ _start:
   
     push 0xb
     pop eax
-    cld
+    cdq
     push edx
    
-    push 0x0a0a312e        ; push '.1  '
-    push 0x302e302e        ; push '.0.0'
-    push 0x37323120        ; push ' 127'     
-    push 0x676e6970        ; push 'ping'
+    push 0x74736f68         ; 
+    push 0x6c61636f         ; 
+    push 0x6c20676e         ; => "//bin/////ping localhost "
+    push 0x69702f2f         ; 
+    push 0x2f2f2f6e         ; 
+    push 0x69622f2f         ;
     
     mov esi, esp
     push edx
-    ;push word 0x632d      ; "c-"
+    ;push word 0x632d       ; "c-"
     add dx, 0x521d
     add dx, 0x1110
     push dx
@@ -25,7 +27,7 @@ _start:
    
     mov ecx, esp
     push edx
-    ;push 0x68732f2f       ; "hs//"
+    ;push 0x68732f2f        ; "hs//"
     mov ebx, 0x68732f2e
     inc ebx
     push ebx
