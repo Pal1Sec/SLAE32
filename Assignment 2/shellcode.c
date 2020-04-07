@@ -1,4 +1,4 @@
-# Filename: linux_x86_shell_reverse_tcp.nasm
+# Filename: shellcode.c
 # Author: SLAE-14209
 #include<stdio.h>
 #include<string.h>
